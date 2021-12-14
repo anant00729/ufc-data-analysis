@@ -121,3 +121,4 @@ report.xml
 scraping/single_event_all_fights/output-data
 scraping/single_event_all_fights/all_event_det.csv
 scraping/ufc_events/ufc_event_raw_dataset.csv
+scraping/ufc_fighters/output-data
