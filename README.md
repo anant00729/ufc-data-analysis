@@ -1,5 +1,5 @@
 ## UFC Data Analysis
-This is a list of every UFC fight in the history of the organisation. Every row contains information about both fighters, fight details and the winner. The data was scraped from ufcstats website. After fightmetric ceased to exist, this came into picture. 
+This is a list of every UFC fight in the history of the organisation. Every row contains information about both fighters, fight details and the winner. The data was scraped from ufcstats website. 
 
 The data is scraped from 
 ["ufcstats.com"](http://www.ufcstats.com/).
