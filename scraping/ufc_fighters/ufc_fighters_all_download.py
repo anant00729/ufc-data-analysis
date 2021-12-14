@@ -1,6 +1,3 @@
-from urllib import request, error, parse
-from bs4 import BeautifulSoup
-import pandas as pd
 import requests
 from string import ascii_lowercase
 import os
