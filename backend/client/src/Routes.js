@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import { HOME_ROUTE, PLAYER_LIST_ROUTE } from "../src/utils/page_route_names";
-import Home from "../src/pages/home";
-import PlayerList from "../src/pages/player-list";
-import Header from "../src/components/header";
+import { HOME_ROUTE, PLAYER_LIST_ROUTE } from "./utils/page_route_names";
+import Home from "./pages/home";
+import PlayerList from "./pages/player-list";
+import Header from "./components/header";
 import { GlobalContext } from "./global/GlobalContext";
 import { PageWrapper } from "./utils/styles";
 

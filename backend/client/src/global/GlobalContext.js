@@ -21,17 +21,23 @@ const initialState = {
       name: "light",
       header_color: "#d20909",
       page_background: "#fff",
+      page_text_color: "#000",
+      card_color: "#fff",
     },
     {
       name: "dark",
       header_color: "#212121",
       page_background: "#181818",
+      page_text_color: "#fff",
+      card_color: "#212121",
     },
   ],
   current_theme: {
     name: "light",
     header_color: "#d20909",
     page_background: "#fff",
+    page_text_color: "#000",
+    card_color: "#fff",
   },
 };
 

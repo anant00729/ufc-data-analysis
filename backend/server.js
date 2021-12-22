@@ -15,12 +15,22 @@ app.use(bodyParser.json());
 app.use(express.static("public/build"));
 app.use(express.static("public"));
 
-app.get("/test", (req, res) => {
-  fs.createReadStream(path.resolve(__dirname, "assets", "parse.csv"))
+app.get("/getAllPlayers", (req, res) => {
+  all_fighter_data = [];
+  ufc_fighter_file_path =
+    __dirname.split("/backend")[0] +
+    "/scraping/ufc_fighters/all_fighters_det.csv";
+  fs.createReadStream(ufc_fighter_file_path)
     .pipe(csv.parse({ headers: true }))
-    .on("error", (error) => console.error(error))
-    .on("data", (row) => console.log(row))
-    .on("end", (rowCount) => console.log(`Parsed ${rowCount} rows`));
+    .on("error", (error) => {
+      console.error(error);
+    })
+    .on("data", (row) => {
+      all_fighter_data.push(row);
+    })
+    .on("end", (rowCount) => {
+      res.json({ status: true, all_fighter_data, total: rowCount });
+    });
 });
 
 const PORT = process.env.PORT || 5000;
