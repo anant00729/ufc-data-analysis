@@ -38,9 +38,10 @@ function Header() {
                   style={{ textDecoration: "none", color: "#fff" }}
                   to={HOME_ROUTE}
                 >
-                  Home
+                  Events & Fights
                 </NavLink>
               </MenuItem>
+              <div style={{ marginLeft: "8px" }}>•</div>
               <MenuItem>
                 <NavLink
                   style={{ textDecoration: "none", color: "#fff" }}

@@ -28,6 +28,7 @@ export const ModalBody = styled.div`
   background-color: ${(p) => p.current_theme.page_background};
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.09);
   display: flex;
+  flex-direction: column;
   padding: 24px;
   margin-top: 24px;
   border-radius: 10px;
@@ -44,10 +45,31 @@ export const PlayerProfileImage = styled(Image)`
 `;
 
 export const PlayerInfoWrapper = styled.div`
-  margin-top: 18px;
+  margin-left: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: ${(p) => p.current_theme.page_text_color};
-  text-align: center;
 `;
+
+export const CarrerStatsContent = styled.div`
+  color: ${(p) => p.current_theme.page_text_color};
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
+export const PlayerImageAndNameWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const CarrerStatsLabel = styled.label`
+  margin-top: 16px;
+`;
+
+export const BasicInfoWrapper = styled.div``;
+
+export const CarrerInfoWrappper = styled.div``;
+
+export const AbbreviationWrappper = styled.div``;
