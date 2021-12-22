@@ -1,6 +1,11 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
-import { SET_ALERT, REMOVE_ALERT, SET_APP_THEME } from "./types";
+import {
+  SET_ALERT,
+  REMOVE_ALERT,
+  SET_APP_THEME,
+  SET_IS_PLAYER_INFO_MODAL,
+} from "./types";
 import { v4 as uuidv4 } from "uuid";
 
 const getThemeFromLocalStorage = () => {
@@ -39,6 +44,7 @@ const initialState = {
     page_text_color: "#000",
     card_color: "#fff",
   },
+  is_player_info_open: false,
 };
 
 // Create context
@@ -49,6 +55,13 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // Actions
+  function setPlayerInfoModal(is_open = false) {
+    dispatch({
+      type: SET_IS_PLAYER_INFO_MODAL,
+      payload: { is_open },
+    });
+  }
+
   function setAppTheme(name = "light") {
     dispatch({
       type: SET_APP_THEME,
@@ -74,8 +87,10 @@ export const GlobalProvider = ({ children }) => {
         alerts: state.alerts,
         all_themes: state.all_themes,
         current_theme: state.current_theme,
+        is_player_info_open: state.is_player_info_open,
         setAlert,
         setAppTheme,
+        setPlayerInfoModal,
       }}
     >
       {children}

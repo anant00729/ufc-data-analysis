@@ -1,7 +1,18 @@
-import { SET_ALERT, REMOVE_ALERT, SET_APP_THEME } from "./types";
+import {
+  SET_ALERT,
+  REMOVE_ALERT,
+  SET_APP_THEME,
+  SET_IS_PLAYER_INFO_MODAL,
+} from "./types";
 
 const appReducer = (state, action) => {
   switch (action.type) {
+    case SET_IS_PLAYER_INFO_MODAL: {
+      return {
+        ...state,
+        is_player_info_open: action?.payload?.is_open,
+      };
+    }
     case SET_APP_THEME: {
       return {
         ...state,
